@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: "https://github.com/KvSmIr/keglo-folio-chic/", // 👈 très important pour GitHub Pages !
+  base: "/keglo-folio-chic/", // 👈 très important pour GitHub Pages !
   server: {
     host: "::",
     port: 8080,

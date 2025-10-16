@@ -1,7 +1,7 @@
 {
   "name": "vite_react_shadcn_ts",
   "private": true,
-  "homepage": "https://github.com/KvSmIr/keglo-folio-chic/",
+  "homepage": "https://kvsmir.github.io/keglo-folio-chic/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
