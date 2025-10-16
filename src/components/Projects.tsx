@@ -8,7 +8,7 @@ const Projects = () => {
       title: "App de refinancement d'entreprise",
       description:
         "Développement complet d'une application permettant aux entreprises de gérer leur refinancement avec suivi en temps réel, analyses financières et tableaux de bord dynamiques.",
-      tags: ['React', 'Django', 'PostgreSQL', 'Chart.js'],
+      tags: ['Angular', 'Django', 'PostgreSQL', 'Chart.js'],
       color: 'from-blue-500 to-cyan-500',
     },
     {
@@ -16,7 +16,7 @@ const Projects = () => {
       title: 'Gestion de salle de gym',
       description:
         'Application Java complète pour la gestion des abonnements, des paiements, du suivi des membres et des statistiques de fréquentation avec interface moderne.',
-      tags: ['Java', 'Spring Boot', 'MySQL', 'JavaFX'],
+      tags: ['Java', 'Swing', 'MySQL', 'JavaFX'],
       color: 'from-purple-500 to-pink-500',
     },
     {
@@ -24,7 +24,7 @@ const Projects = () => {
       title: "Gestion d'événements",
       description:
         "Plateforme de gestion d'événements avec planification, invitations, suivi des participants et génération de rapports automatisés.",
-      tags: ['Angular', 'Node.js', 'MongoDB', 'Socket.io'],
+      tags: ['React', 'Node.js', 'MongoDB', 'React Native'],
       color: 'from-green-500 to-emerald-500',
     },
     {
@@ -32,7 +32,7 @@ const Projects = () => {
       title: 'Gestion de projets',
       description:
         'Application collaborative de gestion de projets avec système de tâches, deadlines, tableaux Kanban et notifications en temps réel.',
-      tags: ['React', 'Node.js', 'PostgreSQL', 'Redis'],
+      tags: ['Angular', 'Node.js', 'PostgreSQL', 'Redis'],
       color: 'from-orange-500 to-red-500',
     },
   ];

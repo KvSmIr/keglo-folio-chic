@@ -39,19 +39,19 @@ const Contact = () => {
     {
       icon: Mail,
       label: 'Email',
-      value: 'contact@keglo.dev',
-      href: 'mailto:contact@keglo.dev',
+      value: 'casimirkeglo@gmail.com',
+      href: 'mailto:casimirkeglo@gmail.com',
     },
     {
       icon: Phone,
       label: 'Téléphone',
-      value: '+XX XXX XXX XXX',
-      href: 'tel:+',
+      value: '+228 92 11 91 67',
+      href: 'tel:+22892119167',
     },
     {
       icon: MapPin,
       label: 'Localisation',
-      value: 'Votre ville, Pays',
+      value: 'Lome, Togo',
     },
   ];
 

@@ -1,6 +1,6 @@
 import { ArrowRight, Github, Linkedin, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import profileImage from '@/assets/profile.jpg';
+import profileImage from '@/assets/icon.png';
 
 const Hero = () => {
   const scrollToSection = (id: string) => {
@@ -62,7 +62,7 @@ const Hero = () => {
           {/* Social Links */}
           <div className="flex gap-4 pt-4">
             <a
-              href="https://github.com"
+              href="https://github.com/KvSmIr"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 glass-card rounded-full hover:text-primary transition-colors"
@@ -71,7 +71,7 @@ const Hero = () => {
               <Github className="h-5 w-5" />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/casimir-keglo-620551384/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 glass-card rounded-full hover:text-primary transition-colors"
@@ -80,7 +80,7 @@ const Hero = () => {
               <Linkedin className="h-5 w-5" />
             </a>
             <a
-              href="mailto:contact@keglo.dev"
+              href="mailto:casimirkeglo@gmail.com"
               className="p-3 glass-card rounded-full hover:text-primary transition-colors"
               aria-label="Email"
             >
