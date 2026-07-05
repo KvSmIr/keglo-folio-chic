@@ -1,0 +1,278 @@
+diff --git a/index.html b/index.html
+index 1116baf..dd578dd 100644
+--- a/index.html
++++ b/index.html
+@@ -3,15 +3,15 @@
+   <head>
+     <meta charset="UTF-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+-    <title>KEGLO Casimir | Développeur Full Stack & Étudiant en Génie Logiciel</title>
+-    <meta name="description" content="Portfolio de KEGLO Casimir - Étudiant en Génie Logiciel passionné par Python, Django, React, Angular, et Flutter. Découvrez mes projets et compétences." />
++    <title>KEGLO Casimir | Administrateur Systèmes & Réseaux | Cybersécurité | Développeur</title>
++    <meta name="description" content="Portfolio de KEGLO Casimir - Futur Administrateur Systèmes et Réseaux spécialisé en cybersécurité (CCNA 1-3, ISC2 CC), et développeur Full Stack. Découvrez mes projets réseau, sécurité et développement." />
+     <meta name="author" content="KEGLO Casimir" />
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+ 
+-    <meta property="og:title" content="KEGLO Casimir | Développeur Full Stack" />
+-    <meta property="og:description" content="Portfolio de KEGLO Casimir - Développeur Full Stack spécialisé en Python, Django, React, et Flutter" />
++    <meta property="og:title" content="KEGLO Casimir | Administrateur Systèmes & Réseaux | Cybersécurité" />
++    <meta property="og:description" content="Portfolio de KEGLO Casimir - Administration Systèmes et Réseaux, Cybersécurité (CCNA, ISC2 CC) et Développement Full Stack" />
+     <meta property="og:type" content="website" />
+     <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+ 
+diff --git a/src/components/About.tsx b/src/components/About.tsx
+index 1de9e0e..6d70142 100644
+--- a/src/components/About.tsx
++++ b/src/components/About.tsx
+@@ -1,27 +1,37 @@
+-import { Code2, Database, Smartphone, Globe } from 'lucide-react';
++import { Network, ShieldCheck, Server, Code2, Database, Smartphone } from 'lucide-react';
+ 
+ const About = () => {
+   const techStacks = [
++    {
++      icon: Network,
++      category: 'Réseaux',
++      technologies: ['Cisco CCNA 1-3', 'Routage & Switching', 'DHCP / DNS', 'VLAN & Wireless'],
++    },
++    {
++      icon: Server,
++      category: 'Systèmes & Infrastructure',
++      technologies: ['Linux (Admin)', 'Windows Server', 'Active Directory', 'Nagios / Zabbix'],
++    },
++    {
++      icon: ShieldCheck,
++      category: 'Cybersécurité',
++      technologies: ['Pentesting', 'Metasploit', 'Cryptographie', 'Firewall'],
++    },
+     {
+       icon: Code2,
+-      category: 'Frontend',
+-      technologies: ['React', 'Angular', 'TypeScript', 'Tailwind CSS'],
++      category: 'Développement',
++      technologies: ['Python', 'Django', 'React', 'Angular'],
+     },
+     {
+       icon: Database,
+-      category: 'Backend',
+-      technologies: ['Python', 'Django', 'Node.js', 'Java', 'C#'],
++      category: 'Bases de données',
++      technologies: ['PostgreSQL', 'MySQL', 'MongoDB'],
+     },
+     {
+       icon: Smartphone,
+       category: 'Mobile',
+       technologies: ['Flutter', 'React Native', 'Android'],
+     },
+-    {
+-      icon: Globe,
+-      category: 'Outils',
+-      technologies: ['Git', 'Docker', 'PostgreSQL', 'MongoDB'],
+-    },
+   ];
+ 
+   return (
+@@ -41,14 +51,22 @@ const About = () => {
+           <div className="glass-card p-8 rounded-2xl">
+             <h3 className="text-2xl font-semibold mb-4 text-gradient">Mon parcours</h3>
+             <p className="text-muted-foreground leading-relaxed mb-4">
+-              Étudiant en Génie Logiciel, je me passionne pour la création d'applications
+-              performantes et élégantes qui résolvent des problèmes concrets. Mon approche
+-              combine créativité et rigueur technique pour livrer des solutions de qualité.
++              Étudiant en dernière année de Licence Administration Systèmes et Réseaux
++              (spécialisation Cybersécurité) à l'IAI-TOGO, je conçois et déploie des
++              infrastructures réseau et systèmes fiables : serveurs DHCP/DNS/Web, pare-feu,
++              supervision, et architectures sécurisées pour entreprises et startups.
++            </p>
++            <p className="text-muted-foreground leading-relaxed mb-4">
++              Certifié Cisco CCNA 1, 2 et 3, je maîtrise l'administration Linux et Windows
++              Server, les tests d'intrusion (pentesting) et la cryptographie. Je m'intéresse
++              particulièrement à la sécurisation des réseaux d'entreprise et à la supervision
++              proactive (Nagios, Zabbix).
+             </p>
+             <p className="text-muted-foreground leading-relaxed">
+-              J'aime explorer de nouvelles technologies et frameworks, tout en consolidant mes
+-              compétences dans les langages que je maîtrise déjà. Mon objectif est de devenir un
+-              développeur full-stack polyvalent capable de gérer des projets de bout en bout.
++              En parallèle, je conserve une double compétence en développement logiciel
++              (Python, Django, React, Angular, Flutter), ce qui me permet de construire des
++              solutions complètes, de l'infrastructure jusqu'à l'application. Mon objectif à
++              terme est de fonder ma propre structure de conseil en cybersécurité au Togo.
+             </p>
+           </div>
+ 
+diff --git a/src/components/Contact.tsx b/src/components/Contact.tsx
+index 61e57e1..3d76f3b 100644
+--- a/src/components/Contact.tsx
++++ b/src/components/Contact.tsx
+@@ -99,8 +99,9 @@ const Contact = () => {
+             <div className="glass-card p-8 rounded-2xl">
+               <h3 className="text-xl font-semibold mb-4">Disponibilité</h3>
+               <p className="text-muted-foreground leading-relaxed">
+-                Je suis actuellement ouvert aux opportunités de stage, projets freelance et
+-                collaborations. N'hésitez pas à me contacter pour discuter de vos besoins.
++                Je suis actuellement ouvert aux opportunités de stage et d'alternance en
++                administration systèmes & réseaux, cybersécurité, ainsi qu'aux projets freelance
++                en développement. N'hésitez pas à me contacter pour discuter de vos besoins.
+               </p>
+             </div>
+           </div>
+diff --git a/src/components/Hero.tsx b/src/components/Hero.tsx
+index 24bf96f..a617f71 100644
+--- a/src/components/Hero.tsx
++++ b/src/components/Hero.tsx
+@@ -34,12 +34,14 @@ const Hero = () => {
+           </div>
+ 
+           <p className="text-xl text-muted-foreground leading-relaxed">
+-            Développeur Full Stack passionné par la création de solutions modernes et élégantes
+-            qui résolvent des problèmes concrets.
++            Administrateur Systèmes & Réseaux passionné par la cybersécurité, l'architecture
++            réseau et le développement de solutions qui résolvent des problèmes concrets.
+           </p>
+ 
+           <p className="text-lg text-muted-foreground/80">
+-            Étudiant en Génie Logiciel spécialisé en Python, Django, React, Angular, et Flutter.
++            Étudiant en Licence Administration Systèmes et Réseaux (spécialisation
++            Cybersécurité) à l'IAI-TOGO — CCNA 1, 2, 3 · ISC2 CC · Pentesting · Linux & Windows
++            Server. Également développeur Full Stack (Python, Django, React, Angular, Flutter).
+           </p>
+ 
+           <div className="flex flex-wrap gap-4 pt-4">
+diff --git a/src/components/Navigation.tsx b/src/components/Navigation.tsx
+index 8ad0ffd..4538306 100644
+--- a/src/components/Navigation.tsx
++++ b/src/components/Navigation.tsx
+@@ -18,6 +18,7 @@ const Navigation = () => {
+     { name: 'À propos', href: '#about' },
+     { name: 'Projets', href: '#projects' },
+     { name: 'Compétences', href: '#skills' },
++    { name: 'Certifications', href: '#certifications' },
+     { name: 'Contact', href: '#contact' },
+   ];
+ 
+diff --git a/src/components/Projects.tsx b/src/components/Projects.tsx
+index 7e3afa0..9107953 100644
+--- a/src/components/Projects.tsx
++++ b/src/components/Projects.tsx
+@@ -1,8 +1,59 @@
+-import { Building2, Dumbbell, Calendar, FolderKanban, ExternalLink } from 'lucide-react';
++import {
++  Megaphone,
++  Network,
++  Activity,
++  Landmark,
++  Terminal,
++  Building2,
++  Dumbbell,
++  Calendar,
++  FolderKanban,
++  ExternalLink,
++} from 'lucide-react';
+ import { Button } from '@/components/ui/button';
+ 
+ const Projects = () => {
+   const projects = [
++    {
++      icon: Megaphone,
++      title: "Architecture réseau d'une startup publicitaire",
++      description:
++        "Conception et réalisation de l'architecture réseau complète d'une startup de création et gestion d'annonces publicitaires : plan d'adressage, segmentation, sécurité et disponibilité des services.",
++      tags: ['Cisco', 'Architecture réseau', 'VLAN', 'Sécurité'],
++      color: 'from-teal-500 to-cyan-600',
++    },
++    {
++      icon: Network,
++      title: 'Déploiement réseau local (DHCP, DNS, Web, Firewall)',
++      description:
++        "Déploiement d'un réseau local d'entreprise avec serveur DHCP, serveur DNS, serveur Web et pare-feu, incluant configuration, tests de connectivité et durcissement de la sécurité périmétrique.",
++      tags: ['Linux', 'DHCP/DNS', 'Firewall', 'Apache/Nginx'],
++      color: 'from-indigo-500 to-blue-600',
++    },
++    {
++      icon: Activity,
++      title: 'Plateforme de supervision réseau (IDS Technologie)',
++      description:
++        "Conception et développement d'une plateforme de supervision réseau pour les clients d'IDS Technologie, permettant le monitoring en temps réel de la disponibilité et des performances des équipements.",
++      tags: ['Nagios', 'Zabbix', 'Monitoring', 'SNMP'],
++      color: 'from-emerald-500 to-teal-600',
++    },
++    {
++      icon: Landmark,
++      title: 'Automatisation du refinancement — FUCEC_TOGO',
++      description:
++        "Développement d'une application pour automatiser le processus de refinancement au sein des COOPEC de la FUCEC_TOGO, réduisant les délais de traitement et sécurisant le suivi des dossiers.",
++      tags: ['Système d\'information', 'Base de données', 'Sécurité'],
++      color: 'from-amber-500 to-orange-600',
++    },
++    {
++      icon: Terminal,
++      title: 'Laboratoire de Pentesting avec Metasploitable',
++      description:
++        "Mise en place d'un laboratoire de tests d'intrusion avec Metasploitable pour identifier et exploiter des vulnérabilités sur une machine volontairement vulnérable, dans un contexte simulé d'entreprise.",
++      tags: ['Metasploit', 'Pentesting', 'Kali Linux', 'Vulnérabilités'],
++      color: 'from-rose-500 to-red-600',
++    },
+     {
+       icon: Building2,
+       title: "App de refinancement d'entreprise",
+@@ -45,7 +96,7 @@ const Projects = () => {
+             Mes <span className="text-gradient">projets</span>
+           </h2>
+           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+-            Découvrez une sélection de mes réalisations techniques
++            Réalisations en administration systèmes & réseaux, cybersécurité et développement
+           </p>
+         </div>
+ 
+diff --git a/src/components/Skills.tsx b/src/components/Skills.tsx
+index 60394d7..23a2e9e 100644
+--- a/src/components/Skills.tsx
++++ b/src/components/Skills.tsx
+@@ -26,6 +26,24 @@ const Skills = () => {
+   }, []);
+ 
+   const skillCategories = [
++    {
++      category: 'Administration Systèmes & Réseaux',
++      skills: [
++        { name: 'Cisco (Routage & Switching)', level: 92 },
++        { name: 'Linux (Administration)', level: 88 },
++        { name: 'Windows Server / Active Directory', level: 85 },
++        { name: 'DHCP / DNS / Firewall', level: 90 },
++      ],
++    },
++    {
++      category: 'Cybersécurité',
++      skills: [
++        { name: 'Pentesting (Metasploit)', level: 82 },
++        { name: 'Supervision (Nagios / Zabbix)', level: 85 },
++        { name: 'Cryptographie', level: 78 },
++        { name: 'ISC2 CC (Cybersécurité)', level: 88 },
++      ],
++    },
+     {
+       category: 'Frontend Development',
+       skills: [
+diff --git a/src/pages/Index.tsx b/src/pages/Index.tsx
+index 5677871..a22141a 100644
+--- a/src/pages/Index.tsx
++++ b/src/pages/Index.tsx
+@@ -3,6 +3,7 @@ import Hero from '@/components/Hero';
+ import About from '@/components/About';
+ import Projects from '@/components/Projects';
+ import Skills from '@/components/Skills';
++import Certifications from '@/components/Certifications';
+ import Contact from '@/components/Contact';
+ import Footer from '@/components/Footer';
+ 
+@@ -15,6 +16,7 @@ const Index = () => {
+         <About />
+         <Projects />
+         <Skills />
++        <Certifications />
+         <Contact />
+       </main>
+       <Footer />
